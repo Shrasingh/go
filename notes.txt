@@ -1,0 +1,9 @@
+compiled - can be compiled,go tool can run file directly without virtual machine 
+           executables are different for operating system 
+
+
+
+what - systems app to web apps - cloud 
+       already in production 
+
+missing - no try catchy lex er does a lot of work      
