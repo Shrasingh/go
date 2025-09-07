@@ -1,0 +1,20 @@
+A pointer is a variable that stores the memory address of another variable.
+
+Instead of holding a value directly, it "points to" where the value is stored in memory.
+
+Why are Pointers Present in Go?
+
+Go includes pointers mainly for control over memory and performance, but in a simpler & safer way compared to C/C++.
+
+Efficiency – Instead of copying large data structures (arrays, structs), Go can pass a pointer to avoid unnecessary duplication.
+
+Passing by reference instead of by value.
+
+Mutability – Go variables are immutable when passed to functions (they are copied).
+
+Using pointers, we can modify the original variable inside a function.
+
+Low-level memory access (when needed) – Go avoids manual memory management (no malloc/free), but pointers let you work closer to memory when performance matters.
+
+No pointer arithmetic – Unlike C, Go disallows direct pointer math (p+1, etc.) to keep it safe and less error-prone.
+Pointers in Go exist to allow efficient data handling and mutability inside functions, without unsafe memory tricks like in C.
