@@ -1,0 +1,2 @@
+defer in go is used to delay the execution of a function until the surrounding function is finishes
+do this at the end just before leaving 
