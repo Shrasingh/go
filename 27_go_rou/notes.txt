@@ -1,0 +1,57 @@
+Definition: Parallelism means actually running multiple tasks at the exact same time, usually requiring multiple CPU cores or processors.
+
+Example:
+Imagine you and your friend are cooking together:
+
+You boil water (task 1).
+
+At the same time, your friend chops vegetables (task 2).
+👉 Both tasks are truly happening simultaneously.
+doing lots of things at once (true simultaneous execution).
+
+Concurrency
+
+Definition: Concurrency means dealing with multiple tasks at the same time conceptually, but not necessarily executing them simultaneously. A single CPU core can switch quickly between tasks, giving the illusion that they run together.
+
+Example:
+Imagine you’re a single person cooking a meal:
+
+You boil water (task 1).
+
+While the water is boiling, you chop vegetables (task 2).
+
+Then you stir the boiling pot and return to chopping.
+👉 You’re handling multiple tasks by switching between them.
+Concurrency = dealing with lots of things at once (task switching)
+
+
+
+GOROUTINE:-
+A goroutine is a lightweight thread managed by the Go runtime.
+
+It lets you run functions concurrently (and in parallel if multiple CPU cores exist).
+
+Unlike OS threads, goroutines are very cheap in terms of memory (a few KB vs MB for threads).
+Why Goroutines?
+
+Lightweight Concurrency → You can spin thousands (or millions) of goroutines without crashing your system.
+
+Efficient Scheduling → The Go runtime automatically schedules goroutines on available OS threads.
+
+Simple Syntax → Adding go before a function call makes it concurrent.
+
+Performance → Ideal for I/O-bound and CPU-bound tasks.
+
+When you start a goroutine, the Go runtime schedules it in the background.
+
+If you have multiple CPU cores, goroutines can run in parallel.
+
+If only one core, they run concurrently (runtime switches between them).
+
+
+diff-
+thread :- managed by OS,fixed stack 1mb
+goroutines:- managed by go runtime flexible stack 2kb
+
+*👉 For learning purposes: use time.Sleep.
+👉 For production code: always use sync.WaitGroup.
