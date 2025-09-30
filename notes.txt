@@ -138,3 +138,9 @@ memory management -: new() allocate memory but no Interview
                      non zeroed storage
                      garbage happens automatically
                      out of scope or null 
+
+
+
+
+
+context :-                       
